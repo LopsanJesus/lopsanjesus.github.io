@@ -1,0 +1,246 @@
+html,
+body,
+div,
+span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+body {
+  font-family: "Graphik", sans-serif;
+  font-weight: 400;
+  color: #333;
+}
+
+.container {
+  padding-right: 140px;
+  padding-left: 140px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  border-top: 4px solid #269e6e;
+  border-left: 4px solid transparent;
+}
+
+header {
+  position: relative;
+}
+
+.highlighted {
+  background-color: #d8ffee;
+  padding: 2px;
+}
+
+.strong {
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Graphik"; /* Nombre que quieras darle a la fuente */
+  src: url("../fonts/Graphik-Medium-Trial.otf") format("opentype"); /* Ruta a tu archivo OTF */
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Graphik"; /* Nombre que quieras darle a la fuente */
+  src: url("../fonts/Graphik-Light-Trial.otf") format("opentype"); /* Ruta a tu archivo OTF */
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header-name {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 0px;
+  color: #45818e;
+}
+
+.header-job-title {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.section-heading {
+  font-size: 14px;
+  color: #45818e;
+  margin-top: 30px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d8e4e7;
+  margin-bottom: 10px;
+}
+
+.job-details-header {
+  font-size: 14px;
+  letter-spacing: -0.4px;
+}
+
+.location {
+  font-size: 15px;
+  letter-spacing: -0.4px;
+  line-height: 1;
+  margin-bottom: 7px;
+}
+
+.content-item,
+.about-me-container {
+  display: block;
+  position: relative;
+  padding-left: 30px; /* Space for the bullet point */
+  font-size: 15px;
+  letter-spacing: -0.2px;
+  line-height: 1.5;
+}
+
+.content-item:before {
+  content: "\2022"; /* Unicode bullet point */
+  position: absolute;
+  left: 0;
+  color: #4a90e2; /* Same color as headings for a unified look */
+}
+
+.header-contact-details {
+  font-size: 15px;
+  letter-spacing: -0.4px;
+  line-height: 1;
+}
+
+.section-content {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.job-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job-title {
+  display: flex;
+  align-items: baseline;
+  font-size: 15px;
+}
+
+.job-name {
+  font-weight: 550;
+}
+
+.date {
+  margin-left: auto;
+  font-style: italic;
+}
+
+.skill-group-container {
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: -0.4px;
+}
+
+.skill-group {
+  font-weight: 550;
+}
+
+.header-contact-details {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 350px;
+  padding: 25px;
+  padding-top: 0px;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.main-content {
+  display: flex; /* Establishes a flex container */
+}
+
+.first-column {
+  flex: 1;
+}
+
+.second-column {
+  flex-basis: 350px; /* Adjust this width to your preference */
+  padding: 25px;
+}
+
+.second-column-container {
+  margin-top: 95px;
+}
+
+.first-column {
+  flex-grow: 1;
+  padding-right: 30px;
+}
+
+.header-job-title {
+  font-size: 22px;
+}
+
+/* To ensure there is a gap between the two columns */
+.first-column,
+.second-column {
+  margin-right: 20px; /* Adjust the value as needed */
+}
+
+/* Remove the last margin-right for the last child (right column) */
+.second-column {
+  margin-right: 0;
+  margin-top: -90px;
+  background: #f9fbfb;
+}
+
+.skill-group-container {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.skills-container-res {
+  margin-top: 25px;
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    display: block;
+  }
+  .header-contact-details {
+    display: none;
+  }
+  .second-column {
+    margin-top: 0px;
+  }
+  .skills-container-res {
+    margin-top: 0px;
+  }
+}
+
+.header-name,
+.section-heading,
+.content-item:before {
+  color: #269e6e;
+}
+
+.second-column {
+  background: #f6fffb;
+  border-left: 2px solid #e1f0e8;
+}
+
+a {
+  -moz-transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out,
+    background-color 0.25s ease-in-out;
+  -webkit-transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out,
+    background-color 0.25s ease-in-out;
+  -ms-transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out,
+    background-color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out,
+    background-color 0.25s ease-in-out;
+  color: inherit;
+  text-decoration: none;
+
+  border-bottom: dotted 1px #62676c;
+}
