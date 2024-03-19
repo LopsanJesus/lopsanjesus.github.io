@@ -169,7 +169,7 @@ header {
   padding: 25px;
 }
 
-.second-column-container {
+.skills-container {
   margin-top: 95px;
 }
 
@@ -200,23 +200,8 @@ header {
   font-size: 14px;
 }
 
-.skills-container-res {
+.projects-container {
   margin-top: 25px;
-}
-
-@media (max-width: 600px) {
-  .main-content {
-    display: block;
-  }
-  .header-contact-details {
-    display: none;
-  }
-  .second-column {
-    margin-top: 0px;
-  }
-  .skills-container-res {
-    margin-top: 0px;
-  }
 }
 
 .header-name,
@@ -243,4 +228,52 @@ a {
   text-decoration: none;
 
   border-bottom: dotted 1px #62676c;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  .main-content {
+    display: block;
+  }
+
+  .header-name {
+    margin-top: 20px;
+  }
+
+  .header-contact-details {
+    display: none;
+  }
+
+  .job-details-header {
+    display: block;
+  }
+
+  .job-details .location {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .job-details-header * {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .second-column {
+    margin-top: 0px;
+  }
+
+  .skills-container {
+    margin-top: 0;
+  }
+
+  .skills-container .section-heading {
+    margin-top: 0px;
+  }
+
+  .projects-container {
+    margin-top: 0px;
+  }
 }
