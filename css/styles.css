@@ -13,6 +13,8 @@ body {
   font-family: "Graphik", sans-serif;
   font-weight: 400;
   color: #333;
+  border-top: 4px solid #269e6e;
+  min-width: 480px;
 }
 
 .container {
@@ -21,12 +23,7 @@ body {
   padding-top: 50px;
   padding-bottom: 50px;
 
-  border-top: 4px solid #269e6e;
   border-left: 4px solid transparent;
-}
-
-header {
-  position: relative;
 }
 
 .highlighted {
@@ -52,11 +49,27 @@ header {
   font-style: normal;
 }
 
+header {
+  position: relative;
+}
+
+.header-details {
+  margin-right: 450px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .header-name {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 0px;
   color: #45818e;
+}
+
+.header-image {
+  display: inline;
+  width: 120px;
+  border-radius: 25px;
 }
 
 .header-job-title {
@@ -148,7 +161,7 @@ header {
 .header-contact-details {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 50px;
   width: 350px;
   padding: 25px;
   padding-top: 0px;
@@ -162,6 +175,9 @@ header {
 
 .first-column {
   flex: 1;
+  flex-grow: 1;
+  padding-right: 30px;
+  margin-bottom: 30px;
 }
 
 .second-column {
@@ -171,11 +187,6 @@ header {
 
 .skills-container {
   margin-top: 95px;
-}
-
-.first-column {
-  flex-grow: 1;
-  padding-right: 30px;
 }
 
 .header-job-title {
@@ -230,9 +241,11 @@ a {
   border-bottom: dotted 1px #62676c;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1150px) {
   .container {
     padding: 20px;
+    max-width: 600px;
+    margin: auto;
   }
 
   .main-content {
@@ -240,7 +253,12 @@ a {
   }
 
   .header-name {
+    width: 300px;
     margin-top: 20px;
+  }
+
+  .header-image {
+    float: right;
   }
 
   .header-contact-details {
