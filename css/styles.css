@@ -32,7 +32,7 @@ body {
 }
 
 .strong {
-  font-weight: 500;
+  font-weight: 800;
 }
 
 header {
@@ -47,7 +47,7 @@ header {
 
 .header-name {
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 800;
   margin-bottom: 0px;
   color: #45818e;
 }
@@ -60,7 +60,7 @@ header {
 
 .header-job-title {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 800;
 }
 
 .section-heading {
@@ -126,7 +126,7 @@ header {
 }
 
 .job-name {
-  font-weight: 550;
+  font-weight: 800;
 }
 
 .date {
@@ -141,7 +141,7 @@ header {
 }
 
 .skill-group {
-  font-weight: 550;
+  font-weight: 800;
 }
 
 .header-contact-details {
