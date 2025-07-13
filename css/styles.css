@@ -10,7 +10,7 @@ span {
 }
 
 body {
-  font-family: "Graphik", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   color: #333;
   border-top: 4px solid #269e6e;
@@ -33,20 +33,6 @@ body {
 
 .strong {
   font-weight: 500;
-}
-
-@font-face {
-  font-family: "Graphik"; /* Nombre que quieras darle a la fuente */
-  src: url("../fonts/Graphik-Medium-Trial.otf") format("opentype"); /* Ruta a tu archivo OTF */
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Graphik"; /* Nombre que quieras darle a la fuente */
-  src: url("../fonts/Graphik-Light-Trial.otf") format("opentype"); /* Ruta a tu archivo OTF */
-  font-weight: 400;
-  font-style: normal;
 }
 
 header {
@@ -123,7 +109,7 @@ header {
 }
 
 .section-content {
-  margin-bottom: 15px;
+  margin-bottom: 35px;
   line-height: 1.5;
 }
 
@@ -294,4 +280,19 @@ a {
   .projects-container {
     margin-top: 0px;
   }
+}
+
+.language-switch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 14px;
+  z-index: 1000;
 }
