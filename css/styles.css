@@ -14,7 +14,9 @@ body {
   font-weight: 400;
   color: #333;
   border-top: 4px solid #269e6e;
-  min-width: 480px;
+  min-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: auto;
 }
 
 .container {
@@ -22,8 +24,26 @@ body {
   padding-left: 140px;
   padding-top: 50px;
   padding-bottom: 50px;
-
   border-left: 4px solid transparent;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease-out forwards;
 }
 
 .highlighted {
@@ -40,9 +60,14 @@ header {
 }
 
 .header-details {
-  margin-right: 450px;
   display: flex;
   justify-content: space-between;
+  margin-right: 450px;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
 }
 
 .header-name {
@@ -50,6 +75,7 @@ header {
   font-weight: 800;
   margin-bottom: 0px;
   color: #45818e;
+  text-align: left;
 }
 
 .header-image {
@@ -59,8 +85,17 @@ header {
 }
 
 .header-job-title {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 800;
+}
+
+.header-contact-details {
+  font-size: 15px;
+  letter-spacing: -0.4px;
+  line-height: 1.4;
+  font-style: italic;
+  margin-top: 10px;
+  text-align: left;
 }
 
 .section-heading {
@@ -89,23 +124,17 @@ header {
 .about-me-container {
   display: block;
   position: relative;
-  padding-left: 30px; /* Space for the bullet point */
+  padding-left: 30px;
   font-size: 15px;
   letter-spacing: -0.2px;
   line-height: 1.5;
 }
 
 .content-item:before {
-  content: "\2022"; /* Unicode bullet point */
+  content: "\2022";
   position: absolute;
   left: 0;
-  color: #4a90e2; /* Same color as headings for a unified look */
-}
-
-.header-contact-details {
-  font-size: 15px;
-  letter-spacing: -0.4px;
-  line-height: 1;
+  color: #4a90e2;
 }
 
 .section-content {
@@ -138,25 +167,19 @@ header {
   font-size: 15px;
   line-height: 1.5;
   letter-spacing: -0.4px;
+  margin-bottom: 15px;
 }
 
 .skill-group {
   font-weight: 800;
 }
 
-.header-contact-details {
-  position: absolute;
-  right: 0;
-  top: 50px;
-  width: 350px;
-  padding: 25px;
-  padding-top: 0px;
-  line-height: 1.4;
-  font-style: italic;
+.skill-line {
+  margin-bottom: 5px;
 }
 
 .main-content {
-  display: flex; /* Establishes a flex container */
+  display: flex;
 }
 
 .first-column {
@@ -167,34 +190,16 @@ header {
 }
 
 .second-column {
-  flex-basis: 350px; /* Adjust this width to your preference */
+  flex-basis: 350px;
   padding: 25px;
+  margin-right: 0;
+  margin-top: -90px;
+  background: #f6fffb;
+  border-left: 2px solid #e1f0e8;
 }
 
 .skills-container {
-  margin-top: 95px;
-}
-
-.header-job-title {
-  font-size: 22px;
-}
-
-/* To ensure there is a gap between the two columns */
-.first-column,
-.second-column {
-  margin-right: 20px; /* Adjust the value as needed */
-}
-
-/* Remove the last margin-right for the last child (right column) */
-.second-column {
-  margin-right: 0;
-  margin-top: -90px;
-  background: #f9fbfb;
-}
-
-.skill-group-container {
-  margin-bottom: 15px;
-  font-size: 14px;
+  margin-top: 32px;
 }
 
 .projects-container {
@@ -207,30 +212,19 @@ header {
   color: #269e6e;
 }
 
-.second-column {
-  background: #f6fffb;
-  border-left: 2px solid #e1f0e8;
-}
-
 a {
-  -moz-transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out,
-    background-color 0.25s ease-in-out;
-  -webkit-transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out,
-    background-color 0.25s ease-in-out;
-  -ms-transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out,
-    background-color 0.25s ease-in-out;
   transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out,
     background-color 0.25s ease-in-out;
   color: inherit;
   text-decoration: none;
-
   border-bottom: dotted 1px #62676c;
 }
 
+/* Media queries */
 @media (max-width: 1150px) {
   .container {
     padding: 20px;
-    max-width: 600px;
+    max-width: 100%;
     margin: auto;
   }
 
@@ -238,17 +232,31 @@ a {
     display: block;
   }
 
+  .header-details {
+    display: block;
+    text-align: center;
+    margin-right: 0px;
+  }
+
+  .header-title {
+    align-items: center;
+  }
+
   .header-name {
-    width: 300px;
+    width: 100%;
     margin-top: 20px;
+    text-align: center;
   }
 
   .header-image {
-    float: right;
+    display: block;
+    margin: 15px auto 0 auto;
+    float: none;
   }
 
   .header-contact-details {
-    display: none;
+    text-align: center;
+    margin-top: 10px;
   }
 
   .job-details-header {
@@ -283,7 +291,7 @@ a {
 }
 
 .language-switch {
-  position: absolute;
+  position: fixed;
   top: 10px;
   right: 10px;
   text-decoration: none;
